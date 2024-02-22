@@ -4,9 +4,13 @@ import { homeReducers } from "./homeSlice";
 
 const store = configureStore({
   reducer: {
-    auth: authApi.reducer,
     home: homeReducers,
+    [authApi.reducerPath]: authApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }).concat(
+      authApi.middleware
+    ),
 });
 
 export default store;

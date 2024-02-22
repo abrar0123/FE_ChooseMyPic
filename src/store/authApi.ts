@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const authApi = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com/" }),
   endpoints: (builder) => ({
     authLogin: builder.mutation({
       query: (data) => {
@@ -12,7 +12,15 @@ export const authApi = createApi({
         };
       },
     }),
+    testData: builder.query({
+      query: () => {
+        return {
+          url: "products",
+          method: "GET",
+        };
+      },
+    }),
   }),
 });
 
-export const { useAuthLoginMutation } = authApi;
+export const { useAuthLoginMutation, useTestDataQuery } = authApi;

@@ -1,5 +1,6 @@
 "use client";
 import TextInput from "@/components/TextInput";
+import { useAuthLoginMutation, useTestDataQuery } from "@/store/authApi";
 import Link from "next/link";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
@@ -8,6 +9,10 @@ import { useSelector } from "react-redux";
 const Signup = () => {
   const ss = useSelector((state) => state.home.name);
   console.log("object99 : ", ss);
+
+  const { data, isLoading } = useTestDataQuery();
+  console.log(isLoading, "object998 : ", data);
+
   return (
     <div className="mx-auto mt-20 ">
       <div className="w-80 flex justify-center items-center flex-col gap-1 ">
