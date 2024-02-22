@@ -19,7 +19,7 @@ const TextInput = (props: TextInputI) => {
       <input
         type={type}
         // className="w-72 bg-inputinside outline-0 border-istroke border px-3 py-1 rounded-sm "
-        className="shadow-sm appearance-none focus:border-blue-900 hover:border-primary border-[1px] w-full px-3 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="font-sans shadow-sm appearance-none focus:border-blue-900 hover:border-primary border-[1px] w-full px-3 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         placeholder={placeholder}
         value={value}
         onChange={onChange}
