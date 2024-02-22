@@ -1,9 +1,26 @@
+"use client";
 import TextInput from "@/components/TextInput";
+import { useAuthLoginMutation, useTestDataQuery } from "@/store/authApi";
 import Link from "next/link";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Signup = () => {
+  const [authLogin, { data, isLoading }] = useAuthLoginMutation();
+
+  console.log(isLoading, "object998 : ", data);
+
+  const userSignupHandler = async () => {
+    const details = {
+      fullName: "John Doe",
+      email: "john3@example.com",
+      password: "password123",
+      userType: "user",
+    };
+    const signup = await authLogin(details);
+    console.log("userSignupHandler : signup ", signup);
+  };
   return (
     <div className="mx-auto mt-20 ">
       <div className="w-80 flex justify-center items-center flex-col gap-1 ">
@@ -37,6 +54,7 @@ const Signup = () => {
         </div>
         <Link
           href={`#`}
+          onClick={userSignupHandler}
           className=" font-sans bg-pink-500 active:border-none h-12 w-[100%] flex justify-center rounded-full border  hover:border-blue-600 shadow-sm font-abel text-white  py-3 px-6 mt-4 "
         >
           Sign up
