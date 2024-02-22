@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Emilys Candy';
+  src: url('/fonts/EmilysCandy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: white;
+  color: black;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Emilys Candy', serif !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.font-candy {
+  font-family: 'Emilys Candy', serif !important;
+}
