@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Emilys Candy';
-  src: url('/fonts/EmilysCandy-Regular.ttf') format('truetype');
+  font-family: "Emilys Candy";
+  src: url("/fonts/EmilysCandy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,15 +14,15 @@ body {
   color: black;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Emilys Candy', serif !important;
+  font-family: "Emilys Candy", serif !important;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #1a1a1a;
     color: #fff;
   }
-}
+} */
 
 .container {
   max-width: 1200px;
@@ -31,5 +31,5 @@ body {
 }
 
 .font-candy {
-  font-family: 'Emilys Candy', serif !important;
+  font-family: "Emilys Candy", serif !important;
 }

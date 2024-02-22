@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { HiOutlineBookmark } from 'react-icons/hi';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { HiOutlineBookmark } from "react-icons/hi";
 
 const Sidebar = () => {
   return (
