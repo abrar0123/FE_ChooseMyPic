@@ -1,9 +1,13 @@
+"use client";
 import TextInput from "@/components/TextInput";
 import Link from "next/link";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Signup = () => {
+  const ss = useSelector((state) => state.home.name);
+  console.log("object99 : ", ss);
   return (
     <div className="mx-auto mt-20 ">
       <div className="w-80 flex justify-center items-center flex-col gap-1 ">
