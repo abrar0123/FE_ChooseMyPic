@@ -1,18 +1,25 @@
 import TextInput from "@/components/TextInput";
 import Link from "next/link";
 import React from "react";
+import { FaGoogle } from "react-icons/fa";
 
 const Signup = () => {
   return (
     <div className="mx-auto mt-20 ">
       <div className="w-80 flex justify-center items-center flex-col gap-1 ">
         <h1 className="font-bold font-sans text-lg">Sign up</h1>
+
         <Link
           href={`#`}
           className=" font-sans active:border-none h-12 w-[100%] flex justify-center rounded-full border  hover:border-blue-600 shadow-sm font-abel text-black  py-3 px-6 mt-4 "
         >
+          <FaGoogle
+            className="flex items-center justify-center m-1 relative right-10"
+            style={{ color: "red" }}
+          />
           Sign up with Google
         </Link>
+
         <div className="flex items-center gap-4 mx-4 mt-3">
           <div className="h-[0.5px] bg-black w-32" />
           <p className="font-sans text-gray-500">OR</p>
