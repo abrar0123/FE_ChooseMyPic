@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Navbar from '../components/Navbar';
-import Sidebar from '@/components/Sidebar';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Choose My Pic',
-  description: '',
+  title: "Choose My Pic",
+  description: "",
 };
 
 export default function RootLayout({
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col`}>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex-1 flex container flex-shrink-0">
-          <Sidebar />
+          {/* <Sidebar /> */}
           <div className="flex-1">{children}</div>
         </div>
       </body>
